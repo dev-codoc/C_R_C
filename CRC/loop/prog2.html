@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SumMultiplicationOfDigit</title>
+</head>
+<body>
+    <p>Find Sum and Multiplication of digit of Number</p>
+    <input type="text" id="n1">
+    <button onclick="result()">Result</button>
+    <h2>Sum : <span id="res1"></span></h2>
+    <h2>Multiplication : <span id="res2"></span></h2>
+    <script>
+        function result(){
+            let num = Number(document.getElementById('n1').value);
+            let sum = 0
+            let mul = 1
+            while(num>0){
+                let rem = num%10
+                num=Math.floor(num/10)
+                sum+=rem
+                mul = mul * rem
+            }
+            document.getElementById('res1').innerHTML = sum
+            document.getElementById('res2').innerHTML = mul
+        }
+    </script>
+</body>
+</html>

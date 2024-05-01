@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FasGayaLoopMe</title>
+</head>
+
+<body>
+    <input type="text" name="" id="n">
+    <button onclick="table()">Table</button>
+    <p id="p1"></p>
+    <script>
+        function table() {
+            let num = Number(document.getElementById('n').value)
+            let ans = ""
+            for (let index = 1; index <= 10; index++) {
+                ans = ans + `${num} X ${index} = ${num*index}` + `<br>`
+            }
+            document.getElementById("p1").innerHTML = ans;
+        }
+    </script>
+</body>
+
+</html>

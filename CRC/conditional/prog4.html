@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeOfTriangle</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter size of I side" id="s1">
+    <input type="text" placeholder="Enter size of II side" id="s2">
+    <input type="text" placeholder="Enter size of III side" id="s3">
+    <button onclick="checkTri()">Check</button>
+    <h1 id="ans"></h1>
+    <script>
+        function checkTri(){
+            let size1 = Number(document.getElementById('s1').value)
+            let size2 = Number(document.getElementById('s2').value)
+            let size3 = Number(document.getElementById('s3').value)
+            if (size1!=size2) {
+                if(size1!=size3){
+                    if (size2!=size3) {
+                        document.getElementById('ans').innerHTML = "It is a Scalene triangle"
+                    }
+                    else{
+                        document.getElementById('ans').innerHTML = "It is a Isosceles triangle"
+                    }
+                }
+                else{
+                    document.getElementById('ans').innerHTML = "It is a Isosceles triangle"
+                }
+            }
+            else{
+                if (size1==size3) {
+                    document.getElementById('ans').innerHTML = "It is a Equilateral triangle"
+                }
+                else{
+                    document.getElementById('ans').innerHTML = "It is a Isosceles triangle"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LargestNumber</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter First number" id="n1">
+    <input type="text" placeholder="Enter Second number" id="n2">
+    <input type="text" placeholder="Enter Third number" id="n3">
+    <button onclick="check()">Check</button>
+    <h3 id="ans"></h3>
+    <script>
+        function check(){
+            let num1 = Number(document.getElementById('n1').value);
+            let num2 = Number(document.getElementById('n2').value);
+            let num3 = Number(document.getElementById('n3').value);
+            if(num1>num2){
+                if(num1>num3){
+                    document.getElementById('ans').innerHTML = num1
+                }
+                else{
+                    document.getElementById('ans').innerHTML = num3
+                }
+            }
+            else{
+                if(num2>num3){
+                    document.getElementById('ans').innerHTML = num2
+                }
+                else{
+                    document.getElementById('ans').innerHTML = num3
+                }
+            }
+        }
+    </script>
+</body>
+</html>

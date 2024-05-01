@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up with CSS</title>
+    <style>
+        *{
+    font-family: monospace;
+    color: white;
+}
+body{
+    background-color: rgb(83, 83, 83);
+}
+form h1{
+    font-size: 30px;
+    color: orange;
+}
+form{
+    text-align: center;
+    padding: 0px 50px 30px 50px;
+    margin: 10% 30% auto 30%;
+}
+fieldset{
+    font-size: 20px;
+    background-color: gray;
+    border-radius: 10px;
+}
+label{
+    font-size: 15px;
+}
+input{
+    width: 80%;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+input[type=checkbox]{
+    width: 20px;
+}
+input:focus{
+    outline: 1px dashed white;
+    background-color: black;
+    color: white;
+}
+button{
+    background-color: orange;
+    border-radius: 10px;
+    margin: 10px;
+    color: black;
+    padding: 10px;
+}
+a{
+    color: black;
+}
+select,option{
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Sign Up</h1>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="name">Name:*</label><br>
+            <input type="text" placeholder="Enter your Name" required><br>
+            <label for="email">Email:*</label><br>
+            <input type="email" placeholder="Enter you Email" required><br>
+            <label for="phnnumber">Phone Number:*</label><br>
+            <input type="number" placeholder="Enter your phone number" required>
+        </fieldset>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="Gender">Gender</label><br>
+            <select id="gender" name="gender" required>
+                <option value=""><p>-----    Select  -----</p></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+            <label for="addrss">Address</label><br>
+            <textarea cols="60" rows="10"></textarea>
+        </fieldset>
+        <button type="button"><a href="sign_in.html" style="text-decoration: none;">Sign In</a></button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
